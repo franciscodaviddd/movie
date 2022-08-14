@@ -1,0 +1,61 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  height: $h-header;
+
+  transition: $transition;
+
+  &__wrapper {
+    height: 100%;
+  }
+
+  &__logo {
+    color: $c1;
+    font-weight: 600;
+    font-size: 24px;
+  }
+  &__nav {
+    display: flex;
+    gap: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: $h-header;
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    align-items: center;
+    width: 100%;
+    @include from(d) {
+      position: static;
+      box-shadow: none;
+      width: auto;
+      gap: 30px;
+    }
+    a {
+      font-weight: 400;
+      position: relative;
+      font-size: 1.2rem;
+      color: white;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        transition: width 0.5s ease;
+        height: 2px;
+        background-color: $c1;
+      }
+
+      &.active::after,
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}

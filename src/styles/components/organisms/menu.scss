@@ -1,0 +1,54 @@
+.menu {
+  position: fixed;
+  width: 60%;
+  height: calc(100vh - 50px);
+  bottom: 50px;
+  right: -100%;
+  background: $g10;
+  z-index: 1;
+  transition: right 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+
+  &__link {
+    color: inherit;
+    font-weight: bold;
+  }
+
+  &.is-active {
+    right: 0;
+  }
+}
+
+@include from(d) {
+  .menu {
+    position: relative;
+    left: 0;
+    top: 0;
+    background: none;
+    height: 50px;
+
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0;
+    font-size: 16px;
+    gap: 25px;
+    &__link {
+      position: relative;
+      text-align: center;
+      z-index: 1;
+      cursor: pointer;
+
+      &.is-active {
+        color: $c1;
+      }
+
+      &:hover {
+        color: $c1;
+      }
+    }
+  }
+}

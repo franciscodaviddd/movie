@@ -1,0 +1,64 @@
+// =======CONFIG=======//
+$c1: #00cfb5;
+$c2: #004df9;
+$c3: #d3ee01;
+$c4: #6e1fff;
+
+$g1: #fdfdfd;
+$g2: #eeeeee;
+$g3: #d6d6d6;
+$g4: #c3c3c3;
+$g5: #bebebe;
+$g6: #adadad;
+$g7: #9e9e9e;
+$g8: #6d6d6d;
+$g9: #3d3d3d;
+$g10: #222222;
+
+$saira: "Saira", sans-serif;
+$lato: "Lato", sans-serif;
+$roboto: "Roboto", sans-serif;
+$monserrat: "Montserrat", sans-serif;
+$poppins: "Poppins", sans-serif;
+
+$font-family: $monserrat;
+
+$max-width: 1024px;
+$link-color: $c1;
+
+$c-placeholder: $g7;
+$breakpoints: (
+  p: 320px,
+  t: 768px,
+  d: 1024px,
+  hd: 1400px,
+);
+
+$fractions: 3 6 8;
+$transition: all 0.2s ease;
+$h-header: 50px;
+$sizes: map-keys($breakpoints);
+
+// ========INCLUDES========//
+@import "tools/mixins";
+@import "tools/basics";
+@import "tools/animations";
+@import "tools/flex";
+// ------COMPONENTS------//
+@import "components/organisms/header";
+@import "components/molecules/btnmenu";
+@import "components/organisms/menu";
+
+@import "components/organisms/card";
+@import "components/organisms/feactured";
+@import "components/organisms/slideBanner";
+@import "../components/molecules/Modal";
+@import "../components/molecules/Title";
+@import "../components/organisms/MovieList";
+@import "../components/organisms/Footer";
+@import "../components/organisms/Search";
+@import "../components/pages/Catalog";
+@import "../components/pages/detail/Details.scss";
+// @import "components/organisms/skills";
+// @import "components/organisms/portfolio";
+// @import "components/organisms/contact";

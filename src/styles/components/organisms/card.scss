@@ -1,0 +1,55 @@
+.movie-card {
+  position: relative;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 160%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+
+  .play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: 6px solid $c1;
+    margin: 0;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    padding-left: 5px;
+    font-size: 50px;
+    display: block;
+    color: $c1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #111;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 5px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover::before {
+      opacity: 0.8;
+    }
+
+    &:hover .play {
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+  }
+}
+.movie-card__title {
+  color: white;
+  font-size: 0.9rem;
+}

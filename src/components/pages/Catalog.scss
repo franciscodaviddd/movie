@@ -1,0 +1,58 @@
+.page-header {
+  padding: 80px 0 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  position: relative;
+
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  h2 {
+    position: relative;
+    z-index: 99;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to top, $g10, rgba(black, 0));
+  }
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+  gap: 20px;
+  margin-bottom: 3rem;
+
+  @include from(d) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  &__loadmore {
+    text-align: center;
+
+    button {
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+      padding: 0.8rem 0.8rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: $transition;
+      &:hover {
+        background: $c1;
+        border: 1px solid $c1;
+      }
+    }
+  }
+}

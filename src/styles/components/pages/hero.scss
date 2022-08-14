@@ -1,0 +1,61 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include from(d) {
+    flex-direction: row;
+    gap: 40px;
+  }
+  &__img {
+    width: 180px;
+    margin: auto;
+    border: 1px solid $g5;
+    padding: 5px;
+    border-radius: 5px;
+    @include from(d) {
+      width: 100%;
+      max-width: 380px;
+    }
+  }
+  &__text {
+    text-align: center;
+    @include from(d) {
+      flex: auto;
+      text-align: left;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $c1;
+    }
+    p:nth-child(2) {
+      font-weight: bold;
+      color: inherit;
+      text-transform: uppercase;
+      margin-top: 0px;
+    }
+    p {
+      margin-top: 10px;
+      color: $g9;
+      font-weight: 600;
+      span {
+        font-weight: 300;
+      }
+    }
+    &-btn {
+      width: fit-content;
+      padding: 5px 10px;
+      background: $c3;
+      margin-top: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 5px;
+      color: white;
+      @include from(d) {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+  }
+}

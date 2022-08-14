@@ -1,0 +1,51 @@
+.search {
+  display: flex;
+  flex-direction: column;
+  @include from(d) {
+    flex-direction: row;
+  }
+  &__title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    @include from(d) {
+      text-align: left;
+    }
+  }
+  &__form {
+    width: 100%;
+    margin-bottom: 40px;
+
+    input {
+      width: 100%;
+      max-width: 400px;
+      height: 30px;
+      border: 1px solid $g6;
+      padding-left: 10px;
+      border-radius: 5px;
+      margin: auto;
+      display: block;
+      @include from(d) {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+    button {
+      width: 100%;
+      max-width: 400px;
+      background: $c3;
+      height: 30px;
+      text-transform: uppercase;
+      color: $g8;
+      font-weight: 600;
+      border-radius: 5px;
+      display: block;
+      margin: 10px auto 0 auto;
+      @include from(d) {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+  }
+}

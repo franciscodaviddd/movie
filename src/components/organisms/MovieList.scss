@@ -1,0 +1,14 @@
+.movie-list {
+  margin-bottom: 10px;
+  .swiper-slide {
+    width: 40%;
+
+    @include from(t) {
+      width: 30%;
+    }
+
+    @include from(t) {
+      width: 15%;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: white;
+
+  &__main {
+    @include from(d) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__secondary {
+    font-weight: 200;
+    font-size: 0.8rem;
+
+    @include from(t) {
+      padding: 0 1rem;
+    }
+
+    @include from(d) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__line {
+    flex: auto;
+    height: 1px;
+    background: white;
+  }
+}
